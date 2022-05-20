@@ -1,4 +1,3 @@
-const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
 const australia = ['Kengūra', 'Ančiasnapis', 'Dingo', 'Atsirado', 'Strutis'];
 
 function rand(min, max) {
@@ -57,6 +56,16 @@ b. Naudodami createElement() ir kitus reikalingus metodus sukurkite kiekvienam m
 c. Elementus su tuščiais stringais praleiskite ir jiems <li> elementų nekurkite. (4 taškai)
  */
 
+
+const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
+
+
+document.createElement("ul").innerText = africa;
+
+for (let i = 0; i < africa.length; i++) {
+    let animals = africa[i]; 
+    document.createElement("ul").innerText = africa;
+}
 
 /* 4. Tiesiogiai HTML faile rankiniu būdu sukurkite du tuščius input laukelius, vieną <h5> tagą ir du mygtukus: “+” ir “-”. (2 taškai)
 a. Suprogramuokite kalkuliatorių taip, kad įrašius skaičius į abu input laukelius ir paspaudus atitinkamą mygtuką su skaičiais būtų atlikta atitinkama aritmetinė operacija. (10 taškai)
