@@ -58,20 +58,28 @@ c. Elementus su tuščiais stringais praleiskite ir jiems <li> elementų nekurki
 
 
 const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
-
-
-document.createElement("ul").innerText = africa;
-
+const ul = document.createElement("ul")
 for (let i = 0; i < africa.length; i++) {
     let animals = africa[i]; 
-    document.createElement("ul").innerText = africa;
+    if(animals !== ''){
+    const li = document.createElement("li")
+    li.innerText = animals;
+    ul.appendChild(li);
+    }
 }
+document.body.appendChild(ul);
 
 /* 4. Tiesiogiai HTML faile rankiniu būdu sukurkite du tuščius input laukelius, vieną <h5> tagą ir du mygtukus: “+” ir “-”. (2 taškai)
 a. Suprogramuokite kalkuliatorių taip, kad įrašius skaičius į abu input laukelius ir paspaudus atitinkamą mygtuką su skaičiais būtų atlikta atitinkama aritmetinė operacija. (10 taškai)
 b. Jos rezultatas būtų atvaizduotas <h5> tage. (3 taškai)
 Pasirinkite patys sau patogiausius metodus tai atlikti.
  */
+
+const num1 = document.querySelector('input')[0];
+const num2 = document.querySelector('input')[1];
+let inputSum = num1 + num2;
+
+ 
 
 
 /* 5. Tiesiogiai HTML faile rankiniu būdu sukurkite <ul> tagą. (2 taškai)
