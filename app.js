@@ -11,19 +11,32 @@ function rand(min, max) {
 a. Paspaudus mygtuką kiekvienam tagui sugeneruotkite rand() atskirą skaičių nuo 1 iki 6 ir jį įrašykite į tago vidų naudojant innerText() metodą. (4 taškai)
 b. Paspaudus mygtuką skaičiai turi būti pergeneruojami iš naujo. Jeigu sugeneruoti skaičiai yra vienodi, juos nudažyti raudonai. (4 taškai)
  */
-console.log(document.querySelectorAll('h2'));
+
+// 1 a)
 document.querySelectorAll('h2').forEach((h2Tag) => {
     let randNum = rand(1, 6);
-    h2Tag.innerHTML(`randNum`);
+    h2Tag.innerText = randNum;
 })
 
-
-
+// 1 b)
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    document.querySelectorAll('h2').forEach(h2Tag => {
+        let randNum = rand(1, 6);
+        h2Tag.innerText = randNum; 
+    (document.querySelectorAll('h2')[0].innerText === document.querySelectorAll('h2')[1].innerText) ? h2Tag.style.color = 'red' : h2Tag.style.color = 'black'
+    }) 
+})
 
 /* 2. Tiesiogiai HTML faile rankiniu būdu sukurkite <h3> tagą ir vieną mygtuką. Susikurkite tuščią masyvą, skaičiams saugoti. (2 taškai)
 a. Paspaudus mygtuką, sugeneruokite rand() skaičių nuo 1 iki 10. Sugeneruotą skaičių pridėkite į masyvą, o tą masyvą atspausdinkite konsolėle. (4 taškai)
 b. <h3> tage skaičiuokite ir su innerText() metodu rašykite visų sugeneruotų skaičių sumą. (4 taškai)
  */
+
+let array = [];
+
+
+
 
 
 /* 3. Tiesiogiai HTML faile rankiniu būdu sukurkite <ul> tagą. (2 taškai)
