@@ -56,7 +56,6 @@ b. Naudodami createElement() ir kitus reikalingus metodus sukurkite kiekvienam m
 c. Elementus su tuščiais stringais praleiskite ir jiems <li> elementų nekurkite. (4 taškai)
  */
 
-
 const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
 const ul = document.createElement("ul")
 for (let i = 0; i < africa.length; i++) {
@@ -77,7 +76,20 @@ Pasirinkite patys sau patogiausius metodus tai atlikti.
 
 const num1 = document.querySelector('input')[0];
 const num2 = document.querySelector('input')[1];
-let inputSum = num1 + num2;
+let plusButton = document.querySelectorAll("button")[3]
+let minusButton = document.querySelectorAll("button")[4]
+let inputSum = 0;
+
+buttonAdd.addEventListener('click', () => {
+    const num1 = document.querySelectorAll("input")[0]
+    const num2 = document.querySelectorAll("input")[1]
+    document.querySelectorAll("h5")[0].innerHTML = pirmasSkaicius.value + antrasSkaicius.value;
+})
+
+  
+minusButton.addEventListener('click', () => {
+    
+})
 
  
 
