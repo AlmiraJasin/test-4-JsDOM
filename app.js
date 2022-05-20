@@ -74,22 +74,23 @@ b. Jos rezultatas būtų atvaizduotas <h5> tage. (3 taškai)
 Pasirinkite patys sau patogiausius metodus tai atlikti.
  */
 
-const num1 = document.querySelector('input')[0];
-const num2 = document.querySelector('input')[1];
-let plusButton = document.querySelectorAll("button")[3]
-let minusButton = document.querySelectorAll("button")[4]
-let inputSum = 0;
-
-buttonAdd.addEventListener('click', () => {
-    const num1 = document.querySelectorAll("input")[0]
-    const num2 = document.querySelectorAll("input")[1]
-    document.querySelectorAll("h5")[0].innerHTML = pirmasSkaicius.value + antrasSkaicius.value;
-})
-
+let plusButton = document.querySelectorAll("button")[2]
+let minusButton = document.querySelectorAll("button")[3]
   
-minusButton.addEventListener('click', () => {
-    
+plusButton.addEventListener('click', () => {
+  	const pirmasSkaicius = document.querySelectorAll("input")[0]
+    const antrasSkaicius = document.querySelectorAll("input")[1]
+    document.querySelectorAll("h5")[0].innerHTML = parseInt(pirmasSkaicius.value) + parseInt(antrasSkaicius.value);
 })
+minusButton.addEventListener('click', () => {
+    const pirmasSkaicius = document.querySelectorAll("input")[0]
+    const antrasSkaicius = document.querySelectorAll("input")[1]
+    document.querySelectorAll("h5")[0].innerHTML = parseInt(pirmasSkaicius.value) - parseInt(antrasSkaicius.value);
+})
+
+/* minusButton.addEventListener('click', () => {
+
+}) */
 
  
 
