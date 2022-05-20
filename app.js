@@ -12,32 +12,44 @@ a. Paspaudus mygtuką kiekvienam tagui sugeneruotkite rand() atskirą skaičių 
 b. Paspaudus mygtuką skaičiai turi būti pergeneruojami iš naujo. Jeigu sugeneruoti skaičiai yra vienodi, juos nudažyti raudonai. (4 taškai)
  */
 
-// 1 a)
 document.querySelectorAll('h2').forEach((h2Tag) => {
     let randNum = rand(1, 6);
     h2Tag.innerText = randNum;
 })
 
-// 1 b)
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    document.querySelectorAll('h2').forEach(h2Tag => {
-        let randNum = rand(1, 6);
-        h2Tag.innerText = randNum; 
-    (document.querySelectorAll('h2')[0].innerText === document.querySelectorAll('h2')[1].innerText) ? h2Tag.style.color = 'red' : h2Tag.style.color = 'black'
-    }) 
+    let firstRand= rand(1, 6);
+    let secondRand= rand(1, 6);
+    document.querySelectorAll('h2')[0].innerHTML = firstRand;
+    document.querySelectorAll('h2')[1].innerHTML = secondRand;
+    if(firstRand === secondRand){
+        document.querySelectorAll('h2').forEach(tag => {
+            tag.style.color ='red'
+        })  
+    } else {
+        document.querySelectorAll('h2').forEach(tag => {
+            tag.style.color ='black'
+        })  
+    }
 })
-
+     
 /* 2. Tiesiogiai HTML faile rankiniu būdu sukurkite <h3> tagą ir vieną mygtuką. Susikurkite tuščią masyvą, skaičiams saugoti. (2 taškai)
 a. Paspaudus mygtuką, sugeneruokite rand() skaičių nuo 1 iki 10. Sugeneruotą skaičių pridėkite į masyvą, o tą masyvą atspausdinkite konsolėle. (4 taškai)
 b. <h3> tage skaičiuokite ir su innerText() metodu rašykite visų sugeneruotų skaičių sumą. (4 taškai)
  */
 
 let array = [];
-
-
-
-
+let numSum = 0;
+let randNum = 0;
+const buttonH3 = document.querySelectorAll('button')[1];
+buttonH3.addEventListener('click', () => {
+    randNum = rand(1, 10);
+    array.push(randNum);
+    console.log(array);
+    numSum += randNum;
+    document.querySelector('h3').innerText = numSum;
+})
 
 /* 3. Tiesiogiai HTML faile rankiniu būdu sukurkite <ul> tagą. (2 taškai)
 a. JS pagalba perskaitykite masyvą africa. (4 taškai)
